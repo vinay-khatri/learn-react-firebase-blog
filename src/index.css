@@ -1,0 +1,227 @@
+/* universal styles */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(270deg, rgb(45, 134, 91) 0%, rgba(55,109,119,1) 100%);
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+form {
+	padding: 20px;
+	margin-top: 10vh;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+input, textarea{
+    color: rgb(182, 182, 182);
+}
+
+a{
+    color: rgb(211, 211, 211) !important;
+}
+
+
+.name {
+    text-transform: capitalize;
+}
+
+
+/* Element Styles */
+
+.navbar {
+    height: 10vh;
+    padding: 0 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.brand-logo{
+    margin-left: 10vw;
+    font-size: 2.5em;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-links a{
+    padding: 1.5vh 2vw;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 100px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.nav-links a:hover{
+    background-color: rgb(58, 58, 58);
+}
+
+
+.card {
+    background-color: rgb(59, 59, 59);
+}
+
+.user-card{
+    color: silver;
+    width: 40vw;
+    margin: auto;
+    margin-top: 20vh;
+    padding: 2vh;
+}
+
+.user-card div{
+    margin: 2vh;
+}
+
+.dashboard{
+    margin: 0 12vw;
+}
+
+.delete-btn{
+    margin-top: 2vh;
+    background-color: transparent;
+}
+
+.about {
+    margin-top: 12vh;
+    margin-left: 4vw;
+    padding: 3vh 2vw;
+    color: rgb(170, 170, 170);
+    background-color: rgb(59, 59, 59);
+    box-shadow: 0px 0px 5px 0px rgb(88, 88, 88);
+}
+
+.animate-about{
+    /* position: relative; */
+    animation-name: about;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes about {
+    0% {opacity: 0}
+    50% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.about h5{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.about p{
+    text-align: justify;
+}
+
+/* Bouncing Ball */
+.wrap {
+position: absolute;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+}
+  
+.text {
+/* color: #fbae17; */
+color: tomato;
+display: inline-block;
+margin-left: 5px;
+}
+
+.bounceball {
+position: relative;
+display: inline-block;
+height: 37px;
+width: 15px;
+}
+.bounceball:before {
+position: absolute;
+content: '';
+display: block;
+top: 0;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+/* background-color: #fbae17; */
+background-color: tomato;
+
+-webkit-transform-origin: 50%;
+        transform-origin: 50%;
+-webkit-animation: bounce 500ms alternate infinite ease;
+        animation: bounce 500ms alternate infinite ease;
+}
+
+@-webkit-keyframes bounce {
+0% {
+    top: 30px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2);
+}
+35% {
+    height: 15px;
+    border-radius: 50%;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+}
+100% {
+    top: 0;
+}
+}
+
+@keyframes bounce {
+0% {
+    top: 30px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2);
+}
+35% {
+    height: 15px;
+    border-radius: 50%;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+}
+100% {
+    top: 0;
+}
+}
+
+
+
+
+
+@media (min-width: 10px) and (max-width: 692px) {
+    .navbar{
+        grid-template-columns: 1fr;
+        height:  20vh;
+	}
+	.nav-links a{
+		border-radius: 50px;
+		padding: 2vh 3vw;
+	}
+    .brand-logo{
+        font-size: 2.2em;
+        margin: auto;
+    }
+    .about {
+        margin-left: 0;
+    }
+    .user-card{
+        width: 80vw;
+		margin: auto;
+		margin-top: 20vh;
+	}
+}
